@@ -10,6 +10,7 @@ int backRowY = 10;
 
 void setup() {
   // put your setup code here, to run once:
+Serial.begin(9600);
 pinMode(backRowR, OUTPUT);
 pinMode(backRowY, OUTPUT);
 pinMode(frontRowY, OUTPUT);
@@ -18,15 +19,15 @@ pinMode(frontRowR, OUTPUT);
 
 void loop() {
   // put your main code here, to run repeatedly:
- digitalWrite(frontRowR, HIGH);
+ digitalWrite(frontRowR, HIGH); Serial.println("Front row Red LED is on");
  delay(5000);
- digitalWrite(backRowY, HIGH);
+ digitalWrite(backRowY, HIGH); Serial.println("The back row yellow is on");
  delay(1000);
- digitalWrite(backRowY, HIGH);
+ digitalWrite(backRowY, HIGH); Serial.println("Back row Red is on");
  delay(1000);
-  digitalWrite(backRowY, LOW);
- digitalWrite(frontRowR, LOW);
- digitalWrite(backRowR,HIGH);
+  digitalWrite(backRowY, LOW);Serial.println("back row Yellow is turned off");
+ digitalWrite(frontRowR, LOW); Serial.println("Fornt row Red is turned off");
+ digitalWrite(backRowR,HIGH); Serial.println("Back row Red is turned ON");
  delay(1000);
  delay(5000);
  digitalWrite(frontRowY, HIGH);
